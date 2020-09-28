@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Praktikum 2 </title>
+</head>
+<body>
+	<h1>Praktikum 2 HTTP - HTTP Server, Chrome web server, NodeJS, NPM http server</h1>
+	<br>
+
+	<div>
+	<h2>1. HTTP</h2>
+	<img src="HTTP.png">
+	<p>Berdasarkan gambar di atas kita bisa lihat terdapat 2 macam header.
+		<ul><b>1. Response Header</b></ul>
+		<ul>Berisi informasi tambahan untuk dikirimkan ke server contoh authorization,informasi browser</ul>
+		<ul><b>informasi:</b></ul>
+		<ul><b>Content-lenght :</b> Ketika konten akan dikirimkan ke browser, server dapat menunjukkan ukurannya (dalam byte) menggunakan header ini.</ul>
+		<ul><b>Location :</b> Header ini digunakan untuk pengalihan. Jika kode respon 301 atau 302, server juga harus mengirim header ini.</ul>
+		<ul><b>2. Request header</b></ul>
+		<ul>Berisi tentang informasi tambahan untuk dikirimkan ke client. seperti informasi halaman yang diminta, informasi server dan masih banyak lagi.</ul>
+		<ul><b>informasi :</b></ul>
+		<ul><b>Method :</b> jenis operasi yang dibutuhkan oleh client atau disyaratkan oleh server.pada gambar diatas method nya berisi GET karena kita meminta atau merequest halaman utama kompas untuk ditampilkan.</ul>
+		<ul><b>Path :</b> Alamat dari resource yang akan diakses.umumnya bagian dari url yang datang setelah host (domain).contoh https://www.traveloka.com/id-id/kereta-api maka path nya adalah /id-id/kereta-api</ul>
+		<ul><b>Scheme :</b> versi protocol</ul>
+		<h4>Sebagai contoh masukan code GET/id-id/tiket-pesawat/https/1.1 maka akan muncul pilihan mengenai tampilan website traveloka bagian tiket pesawat.</h4>
+	</p>
+	</div>
+	<div>
+		<h2>2. Chrome Web Server</h2>
+		Chrome Web Server adalah server web untuk chrome, yang berfungsi menyajikan/menampilkan halaman web dari folder lokal melalui jaringan,menggunakan HTTP.
+		<div>
+		<img src="webserver.png">
+		<ul>Apabila kita klik web server url nya maka akan muncul tampilan seperti ini.ini adalah direktori file local kita.selanjutnya tinggal klik kitabisa.html</ul>
+		<img src="google.png">
+		</div>
+	</div>
+	<div>
+		<h2>3. Node JS dan NPM HTTP Server</h2>
+		<ul>NPM adalah Node Package Manager.Digunakan secara luas oleh developer JavaScript untuk membagikan tools,install berbagai modul dan mengelola dependensi mereka.</ul>
+		<br>
+		<ul>Node JS adalah perangkat lunak untuk mengembangkan aplikasi berbasis web dan ditulis dalam sintaks bahasa pemrograman JavaScript.</ul>
+		<ul>Masuka code program berikut ini:</ul>
+		<ul>var http = require('http');
+ 			http.createServer(function (req, res) {
+   			res.writeHead(200, {'Content-Type': 'text/html'});
+   			res.end('Belajar Node JS dan NPM HTTP Server');
+ 			}).listen(8080);
+ 		</ul>
+ 		<ul>lalu step berikut nya</ul>
+ 		<img src="belajarnode.png">
+ 		<ul>Setelah itu ketikan localhost nya di web</ul>
+ 		<img src="localhost.png">
+	</div>
+</body>
+</html>
