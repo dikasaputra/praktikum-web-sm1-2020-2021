@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Latihan function javascript</title>
+</head>
+<body>
+	<h1><center>Latihan function javascript</center></h1>
+	<script>
+		//contoh pendeklarasian function
+		function getNama(nmDepan,nmBelakang){
+			var nmLengkap = nmDepan + " " + nmBelakang;
+			return nmLengkap;
+		}
+		console.log(getNama("Andhika","Saputra"));
+		//Deklarasi function sebagai Expression
+		var getLuas = function (panjang, lebar) {return panjang * lebar};
+		console.log(getLuas(4, 5));
+
+		//Contoh Memasukan Nilai Balikan Function ke Dalam Variable
+		//Dan contoh function sebagai parameter function lainnya
+
+		var getLuas = function (panjang, lebar) {return panjang * lebar};
+
+		var luas = getLuas(7, 8);
+		console.log(luas);
+
+		//contoh penerapan "function sebagai parameter function lainnya"
+		//Isi parameter function printGetLuas diambil dari parameter function pada baris ke 21 
+		function printGetLuas(f) {
+		  luas = f(4, 5);
+		  console.log(luas);
+		}
+
+		printGetLuas(getLuas);
+		//Contoh penggunaan function arrow
+		const getNamaBenda = (nmb1, nmb2) => nmb1 + " " + nmb2;
+		
+		console.log(getNamaBenda("Laptop","gaming"));
+
+		//Contoh Argumen Fungsi. Arguments adalah nilai yang ditampung dari seluruh argumen yang dikirimkan kepada sebuah fungsi, meski argument tersebut tidak didaftarkan.
+		printPeserta("Alan", "Dadi", "Sita", "Deni");
+
+		function printPeserta() {
+		  console.log(arguments);
+		}
+
+		function ceritaKemarin(nmhari,nmartis,nmtindakan,nmtempat){
+			cerita = "Pada Hari " + nmhari + ", saya bersama " + nmartis + " " + nmtindakan + " di " + nmtempat;
+			console.log(cerita);
+		}
+
+		ceritaKemarin("Kamis","pikachu","main catur","trotoar");
+
+	</script>
+</body>
+</html>
